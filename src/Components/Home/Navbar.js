@@ -92,7 +92,7 @@ const Navbar = () => {
         <span>KIDS</span>
         <span>HOME & LIVING</span>
         <span>BEAUTY</span>
-        <span>STUDIO<sup style={{color: 'pink'}}>NEW</sup></span>
+        <span>STUDIO<sup style={{color: 'pink', fontSize: 10}}>NEW</sup></span>
       </div>
       <div className="search-container">
         <button><SearchIcon/></button>
