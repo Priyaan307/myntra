@@ -5,10 +5,14 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import './Navbar.css'
 import { pink } from "@mui/material/colors";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div className="main-container" >
-        <div className="myntra-logo-container">
+        <div onClick={ () => {
+          navigate('/')
+        }} className="myntra-logo-container">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 818.08 652"

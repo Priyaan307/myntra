@@ -7,7 +7,7 @@ const ProductPage = () => {
     const [productsList, setProductList] = useState([]);
   
     useEffect(() => {
-        fetch("https://api.escuelajs.co/api/v1/products")
+        fetch("https://fakestoreapi.com/products")
           .then((res) => {
             if (!res.ok) {
               throw new Error(`Network response was not ok: ${res.statusText}`);
@@ -27,7 +27,7 @@ const ProductPage = () => {
   return (
     
     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '100'}}>
-        {productsList.map((Product) => (<ProductCart/>))}
+        {productsList.map((Product, index) => (<ProductCart key = {index} Product = {Product} />))}
     </div>
   )
 }

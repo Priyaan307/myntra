@@ -1,6 +1,8 @@
 import React from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Banner = () => {
+  const navigate = useNavigate()
   const deals = [
     {
       id: 1,
@@ -296,16 +298,19 @@ const Banner = () => {
   ];
 
   return (
-    <div style={{ width: "100%", zIndex: 0 }}>
+    <div style={{ width: "100%", zIndex: 0}}>
       <img
-        style={{ objectFit: "cover", width: "84%" }}
+        style={{ objectFit: "cover", width: "84%" , marginLeft: '88px'}}
         src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2023/12/8/774a79bb-15f8-4198-af3f-19120c5889ad1702051471696-Global-strip-980_100.gif"
         alt="banner"
       />
       <img
         style={{ objectFit: "cover", width: "100%" }}
         src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2023/12/7/0f3abf3d-d305-41fe-a491-759abf1122011701953843355-FLAT-500-Off-on-1st-Purchase-Strip.jpg"
-        alt="banner"
+        alt="banner" 
+        onClick={
+          () => navigate("/product")
+        }
       />
       <img
         style={{ objectFit: "cover", width: "50%" }}
